@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tugas Revou</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
 </head>
 
 <body>
@@ -26,18 +27,23 @@
     <div class="div_container" id="home">
         <header class="header_content">
             <h1>DISASTER WASH SHOES</h1>
-            <h3>Ini Artinya</h3>
+            <p><q>Kami Akan Mengatasi Kemalangan Sepatu Kalian</q></p>
         </header>
 
         <div class="div_content">
             <div class="image_content">
-
+                <div>
+                    <img class="mySlide" src="./asset/disaster.jpg" alt="">
+                    <img class="mySlide" src="./asset/repaint.jpg" alt="">
+                    <img class="mySlide" src="./asset/fast.jpg" alt="">
+                    <img class="mySlide" src="./asset/unyellow.jpg" alt="">
+                </div>
             </div>
             <div class="form_container">
                 <div class="isi">
                     <div class="form_title">
-                        <h1>Contact Us</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                        <h1>SEND MESSAGE</h1>
+                        <p>Kami akan melayani anda sebaik mungkin.</p>
                     </div>
                     <div class="form_content">
                         <form action="" class="form_fill">
@@ -79,7 +85,8 @@
                     <img src="./asset/deep.jpg" alt="fast">
                     <div class="card_fill">
                         <h2>DEEP CLEANING</h2>
-                        <P>Perawatan pembersihan sepatu, tas dan topi secara detail dan menyeluruh pada seluruh bagian.</P>
+                        <P>Perawatan pembersihan sepatu, tas dan topi secara detail dan menyeluruh pada seluruh bagian.
+                        </P>
                     </div>
                 </div>
 
@@ -117,27 +124,59 @@
             </div>
         </div>
     </div>
-    
+
     <section class="contact_container" id="contact">
         <div class="contact_title">
             <p>CONTACT US</p>
         </div>
         <div class="contact_content">
-           <h2 class="">DISASTER WASH SHOES</h2>
-           <p>Phone: 089768546454</p>
-           <p>Email: disaster@gmail.com</p>
-           <p>Jl.H.Daud No.89, Depok Timur, Depok</p>
+            <h2 class="">DISASTER WASH SHOES</h2>
+            <p>Phone: 089768546454</p>
+            <p>Email: disaster@gmail.com</p>
+            <p>Jl.H.Daud No.89, Depok Timur, Depok</p>
         </div>
 
         <div class="icon_content">
-           <a href=""><img class="img" src="./asset/whatsapp (1).png" alt=""></a>
-           <a href=""><img class="img" src="./asset/instagram (1).png" alt=""></a>
+            <a href=""><img class="img" src="./asset/whatsapp (1).png" alt=""></a>
+            <a href=""><img class="img" src="./asset/instagram (1).png" alt=""></a>
         </div>
     </section>
 
     <footer class="footer_container">
-       <p>&copy; 2024 Disaster Wash Shoes</p>
+        <p>&copy; 2024 Disaster Wash Shoes</p>
     </footer>
+
+
+    <!-- maaf ka javascript saya taruhnya di inline html, karena kalo saya taro di file JS sintax stylenya tidak terbaca -->
+    <!-- awal javascript untuk banner auto slide -->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusSlide(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var slideList = document.getElementsByClassName("mySlide");
+            if (n > slideList.length) slideIndex = 1
+            else if (n < 1) slideIndex = slideList.length;
+
+            for (i = 0; i < slideList.length; i++) {
+                slideList[i].style.display = "none";
+            }
+
+            slideList[slideIndex - 1].style.display = "block";
+
+        }
+
+        setInterval(() => {
+            plusSlide(1)
+        }, 1000);
+    </script>
+    <!-- akhir javascript untuk banner auto slide -->
+
 </body>
 
 </html>

@@ -15,10 +15,15 @@ body {
     background-color: #000000;
 }
 
+
 .header_content {
     text-align: center;
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
+}
+
+.header_content > p {
+    font-size: 18px;
 }
 
 .logo {
@@ -33,6 +38,10 @@ body {
     width: 65px;
     height: 65px;
     border-radius: 50%;
+}
+
+.nav_content {
+    display: flex;
 }
 
 .nav_content > a {
@@ -56,7 +65,7 @@ hr {
 
 .div_content {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: column; */
     margin-right: 64px;
     margin-left: 64px;
     /* margin-bottom: 64px; */
@@ -65,12 +74,26 @@ hr {
 
 
 .image_content {
-    display: flex;
+    /* display: flex; */
     flex: 2;
     width: 100%;
-    height: 40px;
+    /* height: 100%; */
     background-color: blueviolet;
     margin-right: 24px;
+    /* background-image: url(../asset/disaster.jpg); */
+    /* position: relative;
+    max-width: 1000px;
+    margin: auto; */
+    /* display: none; */
+}
+
+.mySlide {
+    height: 566px;
+    width: 100%;
+    /* object-fit: contain; */
+    /* display: flex;
+    flex-direction: column; */
+    
 }
 
 .form_container {
@@ -270,4 +293,41 @@ hr {
     align-items: center;
     justify-content: center;
     margin-top: 32px;
+}
+
+@media screen and (max-width: 600px) {
+
+    /* .logo, .nav_content {
+        width: max-content;
+
+    } */
+
+    .header {
+        flex-direction: column;
+    }
+
+    .nav_content {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+     
+
+    .div_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image_content {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+    }
+
+    .form_in > input, textarea{
+        width: auto;
+
+    }
+
 }
