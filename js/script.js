@@ -18,3 +18,15 @@
 //     slideList[slideIndex-1].style.display ="block";
 
 // }
+
+function validateForm() {
+   let name = document.forms["form_message"]["your_name"].value;
+   let email = document.forms["form_message"]["your_email"].value;
+   let text = document.forms["form_message"]["message"].value;
+
+   if(name == "" || email == "" || text == "") {
+    alert ("Tolong diisi dengan lengkap")
+   }else {
+    alert ("Terima sudah mengirimkan kami pesan")
+   }
+}
