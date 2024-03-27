@@ -19,7 +19,6 @@
 
 // }
 
-console.log('hai');
 
 function validateForm() {
    let name = document.forms["form_message"]["your_name"].value;
