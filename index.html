@@ -27,7 +27,7 @@
     <div class="div_container" id="home">
         <header class="header_content">
             <h1>DISASTER WASH SHOES</h1>
-            <p><q>Kami Akan Mengatasi Kemalangan Sepatu Kalian</q></p>
+            <p><q>Kami Akan Mengatasi Kemalangan Sepatu Anda</q></p>
         </header>
 
         <div class="div_content">
@@ -46,18 +46,18 @@
                         <p>Kami akan melayani anda sebaik mungkin.</p>
                     </div>
                     <div class="form_content">
-                        <form action="" class="form_fill">
+                        <form action="" class="form_fill" name="form_message" onsubmit="return validateForm()">
                             <div class="form_in">
                                 <label for="">Your Name:</label>
-                                <input type="text" placeholder="First and last name">
+                                <input type="text" placeholder="First and last name" name="your_name">
                             </div>
                             <div class="form_in">
                                 <label for="">Email Address:</label>
-                                <input type="text" placeholder="Example@gmail.com">
+                                <input type="text" placeholder="Example@gmail.com" name="your_email">
                             </div>
                             <div class="form_in">
                                 <label for="">Pesan Anda:</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Pesan Anda..."></textarea>
+                                <textarea name="message" id="" cols="30" rows="10" placeholder="Pesan Anda..."></textarea>
                             </div>
                             <div class="form_in">
                                 <input type="submit" value="SEND" class="submit">
